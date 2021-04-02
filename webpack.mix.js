@@ -4,10 +4,10 @@ require('laravel-mix-eslint');
 mix
 
   // JS
-  .js('./src/js/app.js', './dist/js').eslint()
+  .js('./src/js/app.js', './dist/').eslint()
 
   // CSS
-  .postCss('./src/css/style.css', './dist/css/style.css', [
+  .postCss('./src/css/style.css', './dist/style.css', [
     require('postcss-import'),
     require('tailwindcss'),
     require('postcss-nested'),
@@ -25,7 +25,8 @@ mix
   .copy('src/*.html', 'dist')
 
   // Copy Image directory
-  .copyDirectory('src/img', 'dist/img')
+  .copyDirectory('src/img', 'dist/')
+  .copyDirectory('src/fonts', 'dist/')
 
   // BrowserSync
   .browserSync({
