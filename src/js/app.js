@@ -1,9 +1,3 @@
-/**
- * App
- */
+import App from './components/App';
 
-import component from './components/component';
-
-document.addEventListener('DOMContentLoaded', function() {
-  component();
-});
+document.addEventListener('DOMContentLoaded', () => new App());
