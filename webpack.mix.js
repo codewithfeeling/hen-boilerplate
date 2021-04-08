@@ -9,7 +9,7 @@ mix
   // CSS
   .postCss('./src/css/style.css', './dist/style.css', [
     require('postcss-import'),
-    require('tailwindcss'),
+    require('@tailwindcss/jit'),
     require('postcss-nested'),
   ])
 
